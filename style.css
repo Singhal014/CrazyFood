@@ -1,0 +1,441 @@
+body{
+    margin: 0px;
+    padding: 0px; 
+}
+nav{
+    background-color: black;
+    line-height: 45px;
+    display:flex;
+    justify-content: space-between;
+    position: sticky;
+    top: 0px;
+    /* border-radius: 40%; */
+    z-index: auto;
+}
+
+.logo a{
+    font-size: 42px;
+    color: yellow;
+    font-weight: bold;
+    padding-left: 105px;
+}
+
+a{
+    text-decoration: none;
+    font-size: 22px;
+    color: white;
+}
+ul{ 
+    margin: 0px;
+    padding-right: 80px;
+
+}
+ul li{
+    float: left;
+    padding: 10px;
+    list-style: none;
+}
+ul li a:hover{
+    color: rgb(223, 120, 137);
+    padding-right: 7px;
+    font-size: 25px;
+
+}
+#header{
+    background-image: url('./food1.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+  
+      
+}
+.content{
+     color:whitesmoke;
+     text-align:center;
+     margin: 180px;
+}
+.content h1{
+    font-size: 65px;
+}
+.content p{
+    font-size: 28px;
+}
+.submit-btn:hover{
+    background-color: black;
+    color: peru;
+    font-size: 18px;
+
+}
+#login-form{
+    display: none;
+}
+.form-box{
+    width: 380px;
+    height: 510px;
+    position: relative;
+    margin:2% auto;
+    background-color: aquamarine;
+    padding: 10px;
+    overflow: hidden;
+}
+.button-box{
+    width: 220px;
+    margin: 35px auto;
+    position: relative;
+    box-shadow: 0 0 20px 9px aqua;
+    border-radius: 30px;
+}
+.toggle-btn{
+    padding: 10px 30px;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    outline: none;
+    position: relative;
+}
+#btn{
+    top: 0;
+    left: o;
+    position: absolute;
+    width: 110px;
+    height: 100%;
+    background: red;
+    border-radius: 30px;
+    transition: .5s;
+}
+.input-group-login{
+    top: 150px;
+    position: absolute;
+    width: 280px;
+    transition: .5s;
+}
+.input-group-signup{
+    top: 120px;
+    position: absolute;
+    width: 280px;
+    transition: .5s;
+}
+.input-field{
+    width: 100%;
+    padding: 10px 0;
+    margin: 5px 0;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 1px solid #999;
+    outline: none;
+    background: transparent;
+}
+.submit-btn{
+    width: 85%;
+    padding: 10px 30px;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    background: violet;
+    border: 0;
+    outline: none;
+    border-radius: 30px;
+    
+
+}
+.check-box{
+    margin: 20px 20px 30px 0;
+}
+span{
+    color:white;
+    font-size: 15px;
+    bottom: 68px;
+    position: absolute;
+}
+#login{
+    left: 50px;
+}
+#login input{
+    color: navy;
+    font-size: 14;
+}
+#signup{
+    left: 450px;
+}
+#signup input{
+    color: navy;
+    font-size: 15;
+}
+
+
+nav ul li button{
+    font-size: 20px;
+    color:rgba(255, 0, 98, 0.705);
+    outline: none;
+    background: transparent;
+    cursor: pointer;
+    border: none;
+}
+nav ul li button:hover{
+    color: violet;
+    font-size: 22px;
+}
+nav ul li a:hover{
+    color: yellow;
+}
+ /* slide */
+.carousel-item{
+    height: 95vh;
+    min-height: 400px;
+    background-size: cover;
+    width: 100%;
+    opacity: 95%;
+    margin-top: 30px;
+  }
+  .slide{
+    color: whea1;
+    color: palevioletred;
+  }
+/* By Rohan */
+.btn:hover {
+    background-color: #fda501;
+    text-decoration: none;
+    border-radius: 7px;
+}
+
+.btn {
+    color: #000;
+}
+
+.about {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    align-items: centre;
+    margin: 20px;
+    padding: 80px;
+}
+
+.about-img img {
+    max-width: 90%;
+    border-radius: 30px;
+}
+
+.about-text .us {
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.about-text h2 {
+    font-size: 30px;
+}
+
+.about-text p {
+    margin: 10px 0 15px;
+    font-size: 20px;
+}         */
+/* By Prianshu */
+.heading{
+    text-align: center;
+   }
+   .heading span{
+       color: black;
+       font-size: 27px;
+       font-weight: bold;
+   }
+   .heading h2{
+       font-size: 20px;
+   }
+   .menu-container{
+       display:grid;
+       grid-template-columns: repeat(auto-fit, minmax(220px, auto));
+       gap: 30px;
+       align-items: center;
+   }
+   .box {
+       position: relative;
+       margin-top: 15px;
+       height: auto;
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+       border-radius: 400px;
+       box-shadow: 20px 20px 20px 20px rgba(0, 7, 14, 0.1);
+       padding: 10px;
+   }
+   .box-img {
+       width: 200px;
+       height: 200px;
+   }
+   .box-img img{
+       width: 100%;
+       height: 100%;
+       object-fit: contain;
+       object-position: center;
+   }
+   .box h2{
+       font-size: 30px;
+   }
+   .box h3{
+       font-size: 20px;
+       font-weight: bold;
+       margin: 4px 0 10px;
+   }
+   .box span{
+       font-size: 20px;
+       font-weight: 500;
+   }
+   /* *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+} */
+/* body{
+    background-color: #f3f3f3;
+    font-family: 'Poppins',sans-serif;
+} */
+.menu1{
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(350px,1fr));
+    grid-gap: 20px 40px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.heading1{
+    background-color: #cb202d;
+    color: #ffffff;
+    margin-bottom: 30px;
+    padding: 120px 0 30px 0;
+    grid-column: 1/-1;
+    text-align: center;
+}
+.heading1>h1{
+    font-weight: 400;
+    font-size: 30px;
+    letter-spacing: 10px;
+    margin-bottom: 10px;
+}
+.heading1>h3{
+    font-weight: 600;
+    font-size: 22px;
+    letter-spacing: 5px;
+}
+.food-items{
+    display: grid;
+    position: relative;
+    grid-template-rows: auto 1fr;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    margin: 0 20px;
+}
+.food-items img{
+    position: relative;
+    width: 100%;
+    border-radius: 15px 15px 0 0;
+}
+
+.details{
+    padding: 20px 10px;
+    display: grid;
+    grid-template-rows: auto 1fr 50px;
+    grid-row-gap: 15px;
+}
+.details-sub{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+.details-sub>h5{
+    font-weight: 600;
+    font-size: 18px;
+}
+.price{
+    text-align: right;
+    font-size: 15px;
+}
+.details>p{
+    color: #6f6f6f;
+    font-size: 15px;
+    line-height: 28px;
+    font-weight: 400;
+    align-self: stretch;
+}
+.details>button{
+    background-color: #cb202d;
+    border: none;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 5px;
+    width: 180px;
+}
+#hy{
+    /* text-decoration-line: none; */
+    text-decoration: none;
+}
+ /* rohan */
+ .heading{
+    margin-top: 25px;
+}
+.s-box{
+text-align: center;
+}
+.s-box p{
+    font-size: 22px;
+}
+.s-box img{
+width: 380px;
+}
+.ser{
+    text-align: center;
+    font-size: 25px;
+}
+/* Rishu */
+#s1{background-color: tomato;
+    width: 165px;color: white;height: 40px;text-align: center;
+    padding-left: 6px;padding-right: 6px; padding-top: 2px; border-radius: 10px;margin-left: 1050px;
+    margin-top: -30px;}
+    #s1:hover{background-color:violet;width:165px}
+    .s3:hover{color:aqua;}
+    .l1{height:30px;width: 30px;}
+    .l1:hover{width: 35px;
+    }
+    img:hover{color:aqua;}
+
+    .c1{margin-top: -35px;
+     margin-left: 300px;}
+    /* h1{margin-top: -35px;
+        margin-left: 300px;} */
+    .s2{width:240px;
+        padding-left: 120px }
+    #s3{margin-top: 100px;
+    padding-bottom: 20px;
+    }
+    .s2:hover{color:turquoise}
+    .s3{padding-left: 118px;
+    width: 300px;
+padding-top: 10px;}
+.s6{padding-left: 118px;}
+.s6:hover{color: aqua;}
+.l2{height: 25px;width: 25px;}
+.s6{padding-top: 20px;}
+
+/*  */
+.pas{
+    padding: 20px 10px 10px 100px;
+    font-size: 15px;
+    padding-left: 3;
+    color: whitesmoke;
+ }
+ .we{
+     background-color: black;
+ }
+
+.Cities{
+    padding-left: 50px;
+    margin-top: 0px;
+    padding-top: 20px;
+    color: coral;
+}
+.pas:hover{
+    font-size: 17px;
+    color: coral;
+}

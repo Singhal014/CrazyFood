@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+   
+        *{
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+          font-family: 'Ubuntu', sans-serif;
+        }
+        
+        body{
+          /* background: #2196F3; */
+          margin: 0 10px;
+          background-image: url('./download2.jpg');
+            background-size: cover;
+            height: 100vh;
+        }
+        
+        .payment{
+          background: #f8f8f8;
+          max-width: 360px;
+          margin: 80px auto;
+          height: auto;
+          padding: 35px;
+          padding-top: 70px;
+          border-radius: 5px;
+          position: relative;
+        }
+        
+        .payment h2{
+          text-align: center;
+          letter-spacing: 2px;
+          margin-bottom: 40px;
+          color: #0d3c61;
+        }
+        
+        .form .label{
+          display: block;
+          color: #555555;
+          margin-bottom: 6px;
+        }
+        
+        .input{
+          padding: 13px 0px 13px 25px;
+          width: 100%;
+          text-align: center;
+          border: 2px solid #dddddd;
+          border-radius: 5px;
+          letter-spacing: 1px;
+          word-spacing: 3px;
+          outline: none;
+          font-size: 16px;
+          color: #555555;
+        }
+        
+        .card-grp{
+          display: flex;
+          justify-content: space-between;
+        }
+        
+        .card-item{
+          width: 48%;
+        }
+        
+        .space{
+          margin-bottom: 20px;
+        }
+        
+        .icon-relative{
+          position: relative;
+        }
+        
+        .icon-relative .far{
+          position: absolute;
+          bottom: 12px;
+          left: 15px;
+          font-size: 20px;
+          color: #555555;
+        }
+        
+        .btn{
+          margin-top: 40px;
+          background: #2196F3;
+          padding: 12px;
+          text-align: center;
+          color: #f8f8f8;
+          border-radius: 5px;
+          cursor: pointer;
+        }
+        
+        
+        .payment-logo{
+          position: absolute;
+          top: -50px;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 100px;
+          height: 100px;
+          background: yellow;
+          border-radius: 50%;
+          box-shadow: 0 0 5px rgba(0,0,0,0.2);
+          text-align: center;
+          line-height: 85px;
+        }
+        
+        .payment-logo:before{
+          content: "";
+          position: absolute;
+          top: 5px;
+          left: 5px;
+          width: 90px;
+          height: 90px;
+          background: #2196F3;
+          border-radius: 50%;
+        }
+        
+        .payment-logo p{
+          position: relative;
+          color:palevioletred;
+          font-family: 'Baloo Bhaijaan', cursive;
+          font-size: 58px;
+        }
+        
+        
+        @media screen and (max-width: 420px){
+          .card-grp{
+            flex-direction: column;
+          }
+          .card-item{
+            width: 100%;
+            margin-bottom: 20px;
+          }
+          
+        }
+          #btn{
+            margin-top: 20px;
+            text-decoration: none;
+          }
+        </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="payment">
+          <div class="payment-logo">
+            <p>CB</p>
+          </div>
+          
+          
+          <h2>Payment Gateway</h2>
+          <div class="form">
+            <div class="card space icon-relative">
+              <label class="label">Card Name:</label>
+              <input type="text" class="input" required placeholder="Card Name">
+             
+            </div>
+            <div class="card space icon-relative">
+              <label class="label">Card number:</label>
+              <input type="text" class="input" required placeholder="Card Number" maxlength="16">
+             
+            </div>
+            <div class="card-grp space">
+              <div class="card-item icon-relative">
+                <label class="label">Expiry date:</label>
+                <input type="text" name="expiry-data" class="input" required placeholder="00 / 00" maxlength="4">
+                <i class="far fa-calendar-alt"></i>
+              </div>
+              <div class="card-item icon-relative">
+                <label class="label">CVC:</label>
+                <input type="text" class="input" required placeholder="000" maxlength="3">
+                <i class="fas fa-lock"></i>
+              </div>
+            </div>
+            <p>Choose:</p>
+            <div class="form-check">
+              <input  class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+              <label class="form-check-label" for="flexRadioDefault1">
+                Debit Card
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+              <label class="form-check-label" for="flexRadioDefault2">
+                Credit Card
+              </label>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                <label class="form-check-label" for="flexRadioDefault2">
+                  Paypal Card
+                </label>
+           <div class="btn"><a href="Team_CrazyBeats.html "target="_blank" id="btn" onclick="alert('hii,\n payment sucessfull')">PAY</a></div>
+            
+          </div>
+        </div>
+      </div>
+      
+          
+</body>
+</html>

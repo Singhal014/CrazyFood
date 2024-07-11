@@ -1,0 +1,26 @@
+body{
+    background-color:aquamarine}
+    .box1{margin: 50px;}
+    .box2{display: flex;}
+    .left-box{height: 360px;width: 700px;
+    background-color: white;
+padding:20px}
+    .right-box{height: 360px;width: 450px;
+    background-color: violet;padding: 20px;}
+    .input1{padding-top: 20px;
+    }
+    .input2{padding-top: 40px;}
+    .none{border: none;
+    border-bottom: 1px solid violet;
+width: 200px;}
+.rishu{color:blueviolet}
+.manvi{padding-top: 10px;color: blueviolet;}
+button{background-color:blueviolet;border-radius: 20px;margin-top: 20px;width: 70px;
+color: white;border:none;font-size: 20px;}
+button:hover{background-color: turquoise;width: 100px;}
+
+tr td:first-child{padding-right: 30px;}
+tr td{padding-top: 30px;}
+.hy{
+    text-decoration: none;
+}

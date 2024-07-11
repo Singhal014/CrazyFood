@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up</title>
+    <style>
+        body {
+            margin-top: 30px;
+            padding: 40px;
+            /* background: linear-gradient(120deg, yellow, pink, blue); */
+            background-image: url('./download1.jpg');
+            background-size: cover;
+            height: 120vh;
+            /* overflow: hidden; */
+        }
+
+        .center {
+            position: absolute;
+            top: 70%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 600px;
+            background: white;
+            border-radius: 12px;
+        }
+
+        .center h1 {
+            text-align: center;
+            padding: 0 0 20px 0;
+            border-bottom: 3px solid silver;
+        }
+
+        .center form {
+            padding: 0 40px;
+            /* box-sizing: border-box; */
+        }
+
+        form .txt {
+            /* position: relative; */
+            border-bottom: 3px solid #adadad;
+            margin: 30px 0;
+        }
+
+        .txt1 input {
+            width: 100%;
+            padding: 0 5px;
+            height: 40px;
+            font-size: 16px;
+
+        }
+
+        #Address::placeholder {
+            font-size: 20px;
+        }
+
+        .txt input {
+            width: 100%;
+            padding: 0 5px;
+            height: 40px;
+            font-size: 16px;
+            border: none;
+            background: none;
+            outline: none;
+        }
+
+        .sign {
+            background-color: black;
+            color: yellow;
+            font-size: 25px;
+            border: ridge 4px blue;
+            border-radius: 10px;
+            margin-left: 100px;
+            padding-left: 80px;
+            padding-right: 80px;
+            margin-bottom: 20px;
+            margin-top: 20px;
+        }
+
+        .sign:hover {
+            background-color: cyan;
+            color: black;
+            border-radius: 25px;
+            border: solid black 5px;
+            padding-left: 20px;
+        }
+
+        .card {
+            background-color: blue;
+            color: white;
+            border-radius: 5px;
+            font-size: 18px;
+            border: solid black 2px;
+            text-decoration-line: none;
+        }
+
+        .card:hover {
+            background-color: black;
+            color: white;
+            padding-right: 2px;
+        }
+
+        .txt2 {
+            /* width: 100%;
+            word-spacing: 3px;
+            outline: none; */
+            font-size: 18px;
+            color: #555555;
+            padding-top: 20px;
+        }
+        .tst{
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="center">
+        <h1>Food Delivery Address</h1>
+        <form method="">
+            <div class="txt">
+                <input type="text" required placeholder="Your Full Name">
+
+            </div>
+            <div class="txt">
+                <input type="text" required placeholder="Phone No." maxlength="10">
+
+            </div>
+            <div class="txt">
+                <input type="text" required placeholder="Alternet Phone No. " maxlength="10">
+
+            </div>
+            <div class="txt1">
+
+                <textarea name="Address" id="Address" cols="65" rows="7" placeholder="Address" required></textarea>
+
+            </div>
+
+
+            <div class="txt2">
+                <label class="label">District:</label>
+                <input type="text" required placeholder="Jaipur" class="tst">
+
+                <span class="txt2">
+                    <label class="label">Pin-Code:</label>
+                    <input type="text" required placeholder="302022" maxlength="6" class="tst">
+
+                </span>
+            </div>
+
+
+
+            <div class="txt">
+                <input type="text" required placeholder="Landmark">
+
+            </div>
+            <Div>
+                <h3>CHOOSE OPTION:</h3>
+            </DIv>
+
+            <div><input type="checkbox" id="OPTION" name="PAY" value="PAY" /> BY CASH ON DELIVERY</div>
+            <DIv>
+                <div>
+                    <h4>FOR PAYMENT BY CARD:</h4>
+                </div>
+                <div><a href="payment.html" class="card">BY CARD</a></div>
+                <input type="submit" value="CONFIRM" class="sign">
+
+            </DIv>
+        </form>
+
+    </div>
+</body>
+
+</html>

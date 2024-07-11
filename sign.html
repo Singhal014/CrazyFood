@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up</title>
+    <style>
+    body{
+        margin: 0;
+        padding: 0;
+        /* background: linear-gradient(120deg,yellow,pink,blue); */
+        background-image: url('./rain.jpg');
+        background-size: cover;
+        height: 100vh;
+        /* overflow: hidden; */
+    }
+    .center{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 400px;
+        background: white;
+        border-radius: 12px;
+    }
+    .center h1{
+        text-align: center;
+        padding: 0 0 20px 0;
+        border-bottom: 3px solid silver;
+    }
+    .center form{
+        padding: 0 40px;
+        /* box-sizing: border-box; */
+    }
+    form .txt{
+        /* position: relative; */
+        border-bottom: 3px solid #adadad;
+        margin: 30px 0;
+    }
+    .txt input{
+        width: 100%;
+        padding: 0 5px;
+        height: 40px;
+        font-size: 16px;
+        border: none;
+        background: none;
+        outline: none;
+    }
+    .sign{
+    background-color: black;  
+    color: yellow;
+    font-size: 25px;
+    border: ridge 4px rgb(223, 120, 137);
+    border-radius: 10px;
+    margin-left: 140px;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-bottom: 10px;
+    }
+    .sign:hover{
+    background-color:rgb(223, 120, 137);
+   color: black;
+   border-radius: 25px;
+   border:solid black 5px;
+   padding-left: 20px;
+    }
+
+    </style>
+</head>
+<body>
+    <div class="center">
+        <h1>To Create A New Account</h1>
+        <form method="">
+            <div class="txt">
+                <input type="text" required placeholder="Your Full Name">
+                <!-- <label>Username</label> -->
+            </div>
+            <div class="txt">
+                <input type="text" required placeholder="Email Id or Phone No.">
+                <!-- <label>Create Password</label> -->
+            </div>
+            <div class="txt">
+                <input type="text" required placeholder="Create Password"  id="txtPassword">
+                <!-- <label>Create Password</label> -->
+            </div>
+            <div class="txt">
+                <input type="password" required placeholder="Confirm Password" id="txtConfirmPassword">
+                <!-- <label>Create Password</label> -->
+            </div>
+            <input type="submit" class="sign" id="btnSubmit" value="Submit" onclick="return Validate() ">
+        </form>
+    </div>
+    <script type="text/javascript">
+        function Validate() {
+            var password = document.getElementById("txtPassword").value;
+            var confirmPassword = document.getElementById("txtConfirmPassword").value;
+            if (password != confirmPassword) {
+                alert("Passwords do not match.");
+                return false;
+            }
+            return true;
+        }
+    </script>
+</body>
+</html>

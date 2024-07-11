@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        function showhide() {
+            var moreText = document.getElementById("more");
+            var btnText = document.getElementById("toggle");
+
+            if (dots.style.display === "none") {
+                dots.style.display = "inline";
+                btnText.innerHTML = "Read more";
+                moreText.style.display = "none";
+            } else {
+                dots.style.display = "none";
+                btnText.innerHTML = "Read less";
+                moreText.style.display = "inline";
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Montserrat';
+            text-align: justify;
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: black;
+            color: white
+        }
+
+        .ps {
+            font-size: 90px;
+        }
+        .text {
+            font-size: 40px;
+        }
+
+        .moreText {
+            display: none;
+            font-size: 40px;
+        }
+
+        #toggle {
+            padding: 15px 150px;
+            background-color: white;
+            color: black;
+            border: none;
+            outline: none;
+            font-size: 20px;
+        }
+
+       
+    </style>
+</head>
+
+<body>
+    <h1 class="ps"></h1>
+    <p class="text">If you are selling raw or live foods, a food disclaimer should be posted in the sales area and
+        printed on the product or label. The disclaimer is a defensive tactic to prevent potential
+        liabilities of a consumer developing a food borne illness. Like a warning label on prescription
+        drugs, the disclaimer is a legal statement, which, in general, provides consumers with valuable
+        information about the content of a food product. A food disclaimer may be required by law or
+        FDA regulation, check with your state or city to be sure.<span id="dots">....</span></p>
+    <p class="moreText" id="more">
+
+        1. “THERE MAY BE A RISK ASSOCIATED WITH CONSUMING RAW SHELLFISH AS
+IS THE CASE WITH OTHER RAW PROTEIN PRODUCTS. IF YOU SUFFER FROM
+CHRONIC ILLNESS OF THE LIVER, STOMACH OR BLOOD OR HAVE OTHER
+IMMUNE DISORDERS, YOU SHOULD EAT THESE PRODUCTS FULLY COOKED”;
+or
+2. “CONSUMING RAW OR UNDERCOOKED MEATS, POULTRY, SEAFOOD,
+SHELLFISH OR EGGS MAY INCREASE YOUR RISK OF FOODBORNE ILLNESS,
+ESPECIALLY IF YOU HAVE CERTAIN MEDICAL CONDITIONS.”
+3. “These items are cooked to order and may be served raw or undercooked. Consuming raw or
+undercooked meats, poultry, seafood, shellfish, or eggs may increase the risk of foodborne
+illness.” [On a restaurant menu where the restaurant sells hamburgers]
+
+4. “Our store offers products with peanuts, tree nuts, soy, milk, eggs and wheat. While we take
+steps to minimize the risk of cross contamination, we cannot guarantee that any of our products
+are safe to consumer for people with peanut, tree nut, soy, milk, and egg or wheat allergies.”
+[Warning that might appear at a health-food store]
+
+5. “CAUTION: Contains caffeine comparable to a cup of the leading premium coffee. Limit
+caffeine products to avoid nervousness, sleeplessness, and occasional rapid heartbeat. You may
+experience a Niacin Flush (hot feeling, skin redness) that lasts a few minutes. This is caused by
+increased blood flow near the skin.” [Warning used on the 5 Hour Energy shot product]
+
+6. “ABC Store operates the Farmer’s Bakery, which produces baked goods that contain nuts”.
+We cannot guarantee the absence of cross‐contamination in our baked foods.
+“ABC Store does not assume liability for adverse reactions to foods consumed, or items one
+may come into contact with while eating at any ABC store establishment”.
+
+6. “Contains tree nuts (hazelnuts). Produced in a facility that uses wheat, soy and milk.”[Warning contained on a package of Nature’s Path Organic Maple Nut Oatmeal]</span></p>
+        <div><button onclick="showhide()" id="toggle">Read more</button></div>
+
+
+</body>
+
+</html>

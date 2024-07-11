@@ -1,0 +1,69 @@
+body{
+    background-color: blue;
+}
+
+.review-heading{background-color: crimson;
+text-align: center;
+height: 120px;padding-top: 2px;font-size: 30px;
+border-radius: 20px;}
+.review-box-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.review-box{
+    width: 500px;
+    box-shadow: 2px 2px 30px rgba(0,0,0,0.1);
+    background-color: aquamarine;
+    padding: 20px;
+    margin: 15px;
+    cursor:pointer;
+}
+.profile-img{
+    width: 50px;height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 10px;
+}
+.profile-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.profile{
+    display: flex;
+    align-items: center;
+}
+.name-user{
+    display: flex;
+    flex-direction: column;
+}
+.name-user strong{
+    color: blueviolet;
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+}
+.name-user span{
+    color: rgb(219, 189, 16);
+    font-size: 0.8rem;
+}
+.reviews{
+    color:darkgoldenrod
+}
+.box-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.customer-comment p{
+    font-size: 0.9rem;
+    color:red;
+}
+.review-box:hover{
+    transform: translateY(-10px);
+    transition: all ease 0.3s;
+}

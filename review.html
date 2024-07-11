@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Costomer review </title>
+    <link rel="stylesheet" href="style3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<style>
+    .ss {
+        text-decoration: none;
+        color: wheat;
+        
+        
+    }
+    .checked {
+        color: orange;
+    }
+    .ss{
+  background: none;
+  border: 2px solid #000;
+  font-family: "montserrat",sans-serif;
+  text-transform: uppercase;
+  transition: color 0.4s linear;
+  position: relative;
+}
+.ss:hover{
+  color: #fff;
+}
+.ss::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  z-index: -1;
+  transition: transform 0.5s;
+  transform-origin: 0 0;
+  transition-timing-function: cubic-bezier(0.5,1.6,0.4,0.7);
+}
+.ss::before{
+  transform: scaleY(0);
+}
+.ss:hover::before{
+  transform: scaleY(1);
+}
+
+
+body {
+        font-family:"Raleway";
+      }
+      .center {
+        /* position:absolute; */
+     padding-right: 30px;
+    padding-bottom: 1000px;
+       text-align: end;
+       top:100%;
+        left:90%;
+        /* transform:translate(-50%,-50%); */
+      }
+      .popup-overlay {
+        position:fixed;
+        top:0px;
+        left:0px;
+        width:100%;
+        height:100vh;
+        z-index:1;
+        background:rgba(0,0,0,0.5);
+        display:none;
+      }
+      .popup {
+        position:absolute;
+        top:-150%;
+        left:50%;
+        transform:translate(-50%,-50%) scale(1.15);
+        width:300px;
+        height:540px;
+        background:#f5f5f5;
+        z-index:2;
+        opacity:0;
+        box-shadow:5px 5px 3px rgba(0,0,0,0.2);
+        transition:transform 300ms ease-in-out,opacity 300ms ease-in-out;
+      }
+      body.showLoginForm .popup-overlay {
+        display:block;
+      }
+      body.showLoginForm .popup {
+        top:50%;
+        opacity:1;
+        transform:translate(-50%,-50%) scale(1);
+      }
+      .popup .popup-close {
+        position:absolute;
+        top:-10px;
+        right:-10px;
+        width:40px;
+        height:40px;
+        background:#555;
+        color:#f5f5f5;
+        font-size:25px;
+        font-weight:600;
+        text-align:center;
+        border-radius:50%;
+        cursor:pointer;
+      }
+      .popup .form .avatar {
+        margin:30px 0px 20px;
+        text-align:center;
+      }
+      .popup .form .avatar img {
+        width:120px;
+        border-radius:50%;
+      }
+      .popup .form .header {
+        text-align:center;
+        font-size:20px;
+        font-weight:600;
+        color:#222;
+        margin:20px 0px;
+      }
+      .popup .form .element {
+        padding:8px 20px;
+      }
+      .popup .form .element label {
+        display:block;
+        font-size:14px;
+        color:#222;
+        margin-bottom:5px;
+      }
+      .popup .form .element input {
+        width:100%;
+        padding:8px 10px;
+        box-sizing:border-box;
+        outline:none;
+        border:1px solid #aaa;
+        background:#eee;
+        border-radius:5px;
+      }
+      .popup .form .element button {
+        margin-top:5px;
+        width:100%;
+        padding:10px 0px;
+        text-transform:uppercase;
+        outline:none;
+        border:none;
+        font-size:15px;
+        font-weight:600;
+        border-radius:5px;
+        cursor:pointer;
+        background:#4889da;
+        color:#f5f5f5;
+      }
+.give{
+    background-color: black;
+    border:solid black 2px;
+    color: whitesmoke;
+    font-size: 15px;
+}
+.give:hover{
+    background: cyan;
+    color: black;
+}
+</style>
+
+<body>
+    <section>
+
+        <div class="review-heading">
+            <h1>Top Customer Review</h1>
+            <div class="center">
+                <button onclick="openGiveForm()" class="give">Give us</button>
+              </div>
+              <div class="popup-overlay"></div>
+              <div class="popup">
+                <div class="popup-close" onclick="closeGiveForm()">×</div>
+                <div class="form">
+                  <div class="avatar">
+                    <img src="logo.png" alt="">
+                  </div>
+                  <div class="header">
+                    Write a Review
+                  </div>
+                  <div class="element">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" required>
+                  </div>
+                  <div class="element">
+                    <label for="text" >Rating us out of 5</label>
+                    <div class="star" style="margin-left: 2px;">
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                  </div>
+                    <input type="range" min="1" max="5" required>
+                  </div>
+                  <div class="element">
+                    <label for="username">Write a review</label>
+                    <textarea name="write a review" id="" cols="32" rows="3" required></textarea>
+                  </div>
+                  <div class="element">
+                    <button><a href="thanks.html" style="text-decoration: none;">Submit</a></button>
+                  </div>
+                </div>
+              </div>
+        </div>
+        <div class="review-box-container">
+            <div class="review-box">
+                <div class="box-top">
+                    <div class="profile">
+                        <div class="profile-img">
+                            <img src="kiara.jpg">
+                        </div>
+                        <div class="name-user">
+                            <strong>Kiara advani</strong>
+                            <span>@kiaraadvani</span>
+                        </div>
+                    </div>
+                    <div class="star">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                    </div>
+                </div>
+                <div class="customer-comment">
+                    <p>A fantastic organisation! Great cutomer support from beginning to end of the process. The team
+                        are really informed and go the extra mile at every stage. I would recommend them unreservedly.
+                    </p>
+                </div>
+            </div>
+            <div class="review-box">
+                <div class="box-top">
+                    <div class="profile">
+                        <div class="profile-img">
+                            <img src="Sushant.jpg">
+                        </div>
+                        <div class="name-user">
+                            <strong>Sushant Singh Rajput</strong>
+                            <span>@Sushantsingh</span>
+                        </div>
+                    </div>
+                    <div class="star">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                    </div>
+                </div>
+                <div class="customer-comment">
+                    <p>One of the best apps to order food is CrazyBeat's, they have the fastest deliveries in the market
+                        right now and the options are plenty. The whole deal only gets a cherry on the cake when you see
+                        a variety of offers running, which lets you have lip-smacking food without burning a hole in
+                        your pocket.
+
+                    </p>
+                </div>
+            </div>
+            <div class="review-box">
+                <div class="box-top">
+                    <div class="profile">
+                        <div class="profile-img">
+                            <img src="katrina.webp">
+                        </div>
+                        <div class="name-user">
+                            <strong>katrina kaif</strong>
+                            <span>@katrina kaif</span>
+                        </div>
+                    </div>
+                    <div class="star">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                    </div>
+                </div>
+                <div class="customer-comment">
+                    <p>The reason I’m writing the review is that I had a recent delivery made by CrazyBeat's and it was
+                        made within the time frame which I won’t expect from any online food delivering app.</p>
+                </div>
+            </div>
+            <div class="review-box">
+                <div class="box-top">
+                    <div class="profile">
+                        <div class="profile-img">
+                            <img src="arijit.jpg">
+                        </div>
+                        <div class="name-user">
+                            <strong>Arijit Singh</strong>
+                            <span>@arijit Singh</span>
+                        </div>
+                    </div>
+                    <div class="star">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                    </div>
+                </div>
+                <div class="customer-comment">
+                    <p>When it came to ordering the food, I had no issues at all. I was able to place an order for food
+                        in one sitting, with no payment gateway or server issues. E-wallet payments are quick, and cash
+                        on delivery is always available. Wings of chicken.</p>
+                </div>
+            </div>
+            <div class="review-box">
+                <div class="box-top">
+                    <div class="profile">
+                        <div class="profile-img">
+                            <img src="rohit.jpg">
+                        </div>
+                        <div class="name-user">
+                            <strong>Rohit Sharma</strong>
+                            <span>@Rohit Sharma45</span>
+                        </div>
+                    </div>
+                    <div class="star">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                    </div>
+                </div>
+                <div class="customer-comment">
+                    <p> I have ordered several times from CrazyBeat's and they have never let me down. I have always got
+                        my delivery fresh and on time. Nonetheless, I have once received a delivery which hadn’t had all
+                        the things that I ordered. When I called them, they apologized and I got what I wanted within
+                        around 30 minutes.</p>
+                </div>
+            </div>
+            <div class="review-box">
+                <div class="box-top">
+                    <div class="profile">
+                        <div class="profile-img">
+                            <img src="akshay.webp">
+                        </div>
+                        <div class="name-user">
+                            <strong>Akshay Kumar</strong>
+                            <span>@akshaykumar</span>
+                        </div>
+                    </div>
+                    <div class="star">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star "></span>
+                    </div>
+                </div>
+                <div class="customer-comment">
+                    <p>Last week, I ordered Rasgullas from CrazyBeat's, and it was delivered on time. To be honest, I've
+                        had awful ordering experiences with CrazyBeat's in the past, but in this occasion, the delivery
+                        and food quality were both satisfactory.</p>
+                </div>
+            </div>
+        </div>
+        <button class="ss"
+            style="margin-left:  620px; font-size: 30px; margin-top: 20px;
+            "><a
+                class="ss" href="Team_CrazyBeats.html">Back</a></button>
+    </section>
+</body>
+<script>
+    function openGiveForm(){
+  document.body.classList.add("showLoginForm");
+}
+function closeGiveForm(){
+  document.body.classList.remove("showLoginForm");
+}
+</script>
+</html>
